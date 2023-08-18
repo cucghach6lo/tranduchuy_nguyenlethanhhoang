@@ -1,0 +1,44 @@
+[
+  {
+    "_id": { "$oid": "64dc9dd058b08613d9db1530" },
+    "title": "house",
+    "description": "nice house",
+    "price": { "$numberLong": "10000" },
+    "address": "2e12321bjk",
+    "city": "da nang",
+    "country": "vietnam",
+    "image": "dfashjnkdsa",
+    "facilities": { "2 beds": { "$numberInt": "2" } },
+    "userEmail": "b@gmail.com",
+    "createdAt": { "$date": { "$numberLong": "1692179920498" } },
+    "updateAt": { "$date": { "$numberLong": "1692179920498" } }
+  },
+  {
+    "_id": { "$oid": "64dc9f5f58b08613d9db132b" },
+    "title": " 2house",
+    "description": "nice  2 house",
+    "price": { "$numberLong": "99999999" },
+    "address": "2e12321bjk",
+    "city": "da nang",
+    "country": "vietnam",
+    "image": "dfashjnkdsa",
+    "facilities": { "2 beds": { "$numberInt": "2" } },
+    "userEmail": "a@gmail.com",
+    "createdAt": { "$date": { "$numberLong": "1692180319422" } },
+    "updateAt": { "$date": { "$numberLong": "1692180319422" } }
+  },
+  {
+    "_id": { "$oid": "64dc9f5f58b08613d9db134a" },
+    "title": " 2house",
+    "description": "nice  2 house",
+    "price": { "$numberLong": "99999999" },
+    "address": "2e12321bjk",
+    "city": "da nang",
+    "country": "vietnam",
+    "image": "dfashjnkdsa",
+    "facilities": { "2 beds": { "$numberInt": "2" } },
+    "userEmail": "c@gmail.com",
+    "createdAt": { "$date": { "$numberLong": "1692180319422" } },
+    "updateAt": { "$date": { "$numberLong": "1692180319422" } }
+  }
+]
