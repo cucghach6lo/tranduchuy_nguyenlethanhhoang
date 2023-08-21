@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  position: relative;
 }
 
 .App-logo {
@@ -36,3 +37,17 @@
     transform: rotate(360deg);
   }
 }
+
+.App > :nth-child(1) {
+  background-color: #131110;
+  position: relative;
+}
+
+/* .white-gradient {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(255, 255, 255, 0.522);
+  filter: blur(130px);
+  border-radius: 100px;
+} */

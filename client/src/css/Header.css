@@ -1,0 +1,14 @@
+.h-menu:hover {
+  cursor: pointer;
+}
+
+.button {
+  padding: 0.6rem 1.4rem;
+  background: linear-gradient(97.05deg, #4066ff 3.76%, #4b60b2 100%);
+  transition: all 300ms ease-in;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}

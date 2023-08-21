@@ -1,0 +1,36 @@
+.section-hero {
+  color: white;
+}
+
+/* left  */
+.title {
+  position: relative;
+  z-index: 1;
+}
+.orange-circle {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 999px;
+  background: linear-gradient(270deg, #ffb978 0%, #ff922d 100%);
+  position: absolute;
+  z-index: -1;
+  top: -4%;
+  right: 10%;
+}
+
+.search-bar {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 3px solid rgba(255, 255, 255, 0.374);
+}
+
+/* right */
+.image-container {
+  border-radius: 15rem 15rem 0 0;
+  border: 8px solid rgba(255, 255, 255, 0.12);
+}
+
+/* @@ */
+.review > :nth-child(1) {
+  font-size: 2rem;
+}
