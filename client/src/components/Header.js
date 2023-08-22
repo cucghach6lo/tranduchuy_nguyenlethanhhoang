@@ -3,7 +3,7 @@ import logo from "../asset/images/logo.png";
 import cssHeader from "../css/Header.css";
 const Header = () => {
   return (
-    <section className="bg-[#131110]">
+    <section className="bg-[#2d2a2a]">
       <div className="py-4 flex flex-wrap justify-around  items-center text-[white] gap-y-8 p-6 w-full">
         <img src={logo} width={100} />
         <div className="flex justify-center items-center gap-8 h-menu">
