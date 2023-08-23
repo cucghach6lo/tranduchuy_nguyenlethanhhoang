@@ -5,12 +5,12 @@ import { HiLocationMarker } from "react-icons/hi";
 import CountUp from "react-countup";
 const Hero = () => {
   return (
-    <section className="section-hero relative bg-[#131110] ">
+    <section className="section-hero relative">
       <div className="content p-6 w-full flex gap-y-8 justify-around items-center flex-wrap">
         <div className="content-left gap-[12rem] flex flex-col justify-center items-start">
           <div className="title flex flex-col gap-12 ">
             <div className="orange-circle"></div>
-            <h1 className="font-semibold leading-[4rem] text-[4rem]  ">
+            <h1 className="font-semibold leading-[4rem] text-[4rem] text-start ">
               Discover <br /> Most Suitable <br /> Property
             </h1>
             <div className="description flex flex-col justify-center items-start">
