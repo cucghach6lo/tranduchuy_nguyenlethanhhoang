@@ -17,7 +17,7 @@ import data from "../utils/accordion";
 function Value() {
   const [className, setClassName] = useState(null);
   return (
-    <section className="v-wrapper">
+    <section className="v-wrapper p-16 w-full flex gap-y-8 justify-around items-center flex-wrap">
       <div className="v-container p-6 w-full flex gap-y-8 items-center flex-wrap">
         {/* left side  */}
         <div className="v-left">

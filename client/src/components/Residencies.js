@@ -28,7 +28,7 @@ const SliderButton = () => {
 
 function Residencies() {
   return (
-    <section className="row-wrapper ">
+    <section className="row-wrapper px-16">
       <div className="p-8 w-full r-container overflow-hidden  flex-col">
         <div className="r-header pb-8 flex flex-col justify-center items-start ">
           <span className="text-orange-400 text-2xl font-semibold block">
