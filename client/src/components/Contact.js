@@ -8,83 +8,83 @@ import { MdVideoCall } from "react-icons/md";
 
 function Contact() {
   return (
-    <section className="c-wapper">
-      <div className="c-container p-6 w-full flex gap-y-8 justify-around items-center flex-wrap">
+    <section className="c-wapper" id="contact-us">
+      <div className="c-container paddings innerWidth flexCenter">
         {/* left side  */}
-        <div className="c-left flex flex-col justify-center items-start">
+        {/* left side */}
+        <div className="flexColStart c-left">
           <span className="orangeText">Our Contact Us</span>
           <span className="primaryText">Easy to contact us</span>
-          <span className="text-[#8c8b8b] text-[1rem]">
-            We always ready to help by providijng the best services for you.
-            <br />
-            We beleive a good blace to live can make your life better
+          <span className="secondaryText">
+            We always ready to help by providijng the best services for you. We
+            beleive a good blace to live can make your life better{" "}
           </span>
 
-          <div className="contactModes flex flex-col justify-center items-start">
+          <div className="flexColStart contactModes">
             {/* first row */}
-
-            <div className="flex flex-row justify-center items-start gap-6">
-              <div className="mode flex justify-center items-center flex-col">
+            <div className="flexStart row">
+              <div className="flexColCenter mode">
                 <div className="flexStart">
-                  <div className="flexCenter c-icon">
+                  <div className="flexCenter icon">
                     <MdCall size={25} />
                   </div>
-                  <div className="flex flex-col justify-center items-start detail">
+                  <div className="flexColStart detail">
                     <span className="primaryText">Call</span>
-                    <span className="secondaryText">+84 7785 6965</span>
+                    <span className="secondaryText">021 123 145 14</span>
                   </div>
                 </div>
-                <div className="flexCenter button ">Call Now</div>
+                <div className="flexCenter button">Call now</div>
               </div>
 
-              <div className="mode flex justify-center items-center flex-col">
+              <div className="flexColCenter mode">
                 <div className="flexStart">
-                  <div className="flexCenter c-icon">
+                  <div className="flexCenter icon">
                     <BsFillChatDotsFill size={25} />
                   </div>
-                  <div className="flex flex-col justify-center items-start detail">
+                  <div className="flexColStart detail">
                     <span className="primaryText">Chat</span>
-                    <span className="secondaryText">+84 7785 6965</span>
+                    <span className="secondaryText">021 123 145 14</span>
                   </div>
                 </div>
-                <div className="flexCenter button ">Chat Now</div>
+                <div className="flexCenter button">Chat now</div>
               </div>
             </div>
-            {/* second row  */}
-            <div className="flex flex-row justify-center items-start gap-6">
-              <div className="mode flex justify-center items-center flex-col">
+
+            {/* second row */}
+            <div className="flexStart row">
+              <div className="flexColCenter mode">
                 <div className="flexStart">
-                  <div className="flexCenter c-icon">
+                  <div className="flexCenter icon">
                     <MdVideoCall size={25} />
                   </div>
-                  <div className="flex flex-col justify-center items-start detail">
+                  <div className="flexColStart detail">
                     <span className="primaryText">Video Call</span>
-                    <span className="secondaryText">+84 7785 6965</span>
+                    <span className="secondaryText">021 123 145 14</span>
                   </div>
                 </div>
-                <div className="flexCenter button ">Video Call Now</div>
+                <div className="flexCenter button">Video Call now</div>
               </div>
 
-              <div className="mode flex justify-center items-center flex-col">
+              <div className="flexColCenter mode">
                 <div className="flexStart">
-                  <div className="flexCenter c-icon">
-                    <MdVideoCall size={25} />
+                  <div className="flexCenter icon">
+                    <HiChatBubbleBottomCenterText size={25} />
                   </div>
-                  <div className="flex flex-col justify-center items-start detail">
+                  <div className="flexColStart detail">
                     <span className="primaryText">Message</span>
-                    <span className="secondaryText">+84 7785 6965</span>
+                    <span className="secondaryText">021 123 145 14</span>
                   </div>
                 </div>
-                <div className="flexCenter button ">Message Now</div>
+                <div className="flexCenter button">Message now</div>
               </div>
             </div>
           </div>
         </div>
 
         {/* right side  */}
-        <div className="c-right">
-          <div className="c-image-container truncate  w-[30rem] h-[35rem]">
-            <img src={image_Contact} className="h-full w-auto" />
+        <div className="flexEnd c-right">
+          <div className="image-container">
+            <img src={image_Contact} />
           </div>
         </div>
       </div>

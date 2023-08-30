@@ -1,6 +1,7 @@
 .App {
-  text-align: center;
   position: relative;
+  overflow-x: clip;
+  background-color: white;
 }
 
 .App-logo {
@@ -43,11 +44,15 @@
   position: relative;
 }
 
-/* .white-gradient {
+.App > :nth-child(1) {
+  background: var(--black);
+  position: relative;
+}
+.white-gradient {
   position: absolute;
   width: 20rem;
   height: 20rem;
-  background-color: rgba(255, 255, 255, 0.522);
-  filter: blur(130px);
+  background: rgba(255, 255, 255, 0.522);
+  filter: blur(100px);
   border-radius: 100px;
-} */
+}

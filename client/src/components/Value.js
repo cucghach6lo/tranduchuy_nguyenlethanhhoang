@@ -9,7 +9,7 @@ import {
 } from "react-accessible-accordion";
 import "react-accessible-accordion/dist/fancy-example.css";
 import { MdOutlineArrowDropDown } from "react-icons/md";
-import css from "../css/css.css";
+import "../css/css.css";
 import "../css/Value.css";
 import image_left from "../asset/images/value.png";
 import data from "../utils/accordion";
@@ -17,27 +17,29 @@ import data from "../utils/accordion";
 function Value() {
   const [className, setClassName] = useState(null);
   return (
-    <section className="v-wrapper p-16 w-full flex gap-y-8 justify-around items-center flex-wrap">
-      <div className="v-container p-6 w-full flex gap-y-8 items-center flex-wrap">
-        {/* left side  */}
+    <section id="value" className="v-wrapper">
+      <div className="paddings innerWidth flexCenter v-container">
+        {/* left side */}
         <div className="v-left">
-          <div className="v-image-container truncate  w-[30rem] h-[35rem]">
-            <img src={image_left} />
+          <div className="image-container">
+            <img src={image_left} alt="" />
           </div>
         </div>
 
-        {/* right side  */}
-        <div className="v-right flex flex-col justify-center items-start text-start gap-2">
+        {/* right */}
+        <div className="flexColStart v-right">
           <span className="orangeText">Our Value</span>
+
           <span className="primaryText">Value We Give to You</span>
-          <span className="text-[#8c8b8b] text-[1rem]">
+
+          <span className="secondaryText">
             We always ready to help by providijng the best services for you.
             <br />
             We beleive a good blace to live can make your life better
           </span>
 
           <Accordion
-            className=" mt-8 border-none"
+            className="accordion"
             allowMultipleExpanded={false}
             preExpanded={[0]}
           >
@@ -49,22 +51,18 @@ function Value() {
                   uuid={i}
                 >
                   <AccordionItemHeading>
-                    <AccordionItemButton className="bg-white p-4 w-full flex justify-between cursor-pointer ">
+                    <AccordionItemButton className="flexCenter accordionButton ">
+                      {/* just for getting state of item */}
                       <AccordionItemState>
                         {({ expanded }) =>
                           expanded
-                            ? setClassName("expanded")
-                            : setClassName("collapsed")
+                            ? setClassName("expanded collapsed")
+                            : setClassName("collapsed expanded")
                         }
                       </AccordionItemState>
-
-                      <div className="flex gap-y-8 justify-center flex-wrap icon">
-                        {item.icon}
-                      </div>
-                      <span className="text-[#1f3e72] font-bold text-[1.5rem]">
-                        {item.heading}
-                      </span>
-                      <div className="flex gap-y-8 justify-center flex-wrap icon">
+                      <div className="flexCenter icon">{item.icon}</div>
+                      <span className="primaryText">{item.heading}</span>
+                      <div className="flexCenter icon">
                         <MdOutlineArrowDropDown size={20} />
                       </div>
                     </AccordionItemButton>
