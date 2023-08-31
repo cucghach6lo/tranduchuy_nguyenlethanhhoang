@@ -9,12 +9,15 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Property from "./pages/Property";
+// import UserDetailContext from "./context/UserDetailContext";
 
 function App() {
   const queryClient = new QueryClient();
 
   return (
     <div className="App">
+      {/* <UserDetailContext.Provider value={{ userDetails, setUserDetails }}> */}
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <Suspense fallback={<div>Loading...</div>}>
@@ -23,6 +26,7 @@ function App() {
                 <Route path="/" element={<Website />} />
                 <Route path="/properties">
                   <Route index element={<Properties />} />
+                  <Route path=":propertyId" element={<Property />} />
                 </Route>
               </Route>
             </Routes>
@@ -31,6 +35,7 @@ function App() {
         <ToastContainer />
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
+      {/* </UserDetailContext.Provider> */}
     </div>
   );
 }
