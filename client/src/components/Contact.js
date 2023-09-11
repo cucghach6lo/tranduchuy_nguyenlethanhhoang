@@ -30,7 +30,7 @@ function Contact() {
                   </div>
                   <div className="flexColStart detail">
                     <span className="primaryText">Call</span>
-                    <span className="secondaryText">021 123 145 14</span>
+                    <span className="secondaryText">0377 856 965</span>
                   </div>
                 </div>
                 <div className="flexCenter button">Call now</div>
@@ -43,7 +43,7 @@ function Contact() {
                   </div>
                   <div className="flexColStart detail">
                     <span className="primaryText">Chat</span>
-                    <span className="secondaryText">021 123 145 14</span>
+                    <span className="secondaryText">0377 856 965</span>
                   </div>
                 </div>
                 <div className="flexCenter button">Chat now</div>
@@ -59,7 +59,7 @@ function Contact() {
                   </div>
                   <div className="flexColStart detail">
                     <span className="primaryText">Video Call</span>
-                    <span className="secondaryText">021 123 145 14</span>
+                    <span className="secondaryText">0377 856 965</span>
                   </div>
                 </div>
                 <div className="flexCenter button">Video Call now</div>
@@ -72,7 +72,7 @@ function Contact() {
                   </div>
                   <div className="flexColStart detail">
                     <span className="primaryText">Message</span>
-                    <span className="secondaryText">021 123 145 14</span>
+                    <span className="secondaryText">0377 856 965</span>
                   </div>
                 </div>
                 <div className="flexCenter button">Message now</div>

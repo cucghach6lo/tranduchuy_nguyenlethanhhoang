@@ -7,10 +7,13 @@ import useHeaderColor from "../hooks/userHeaderColor";
 import OutsideClickHandler from "react-outside-click-handler";
 import { BiMenuAltRight } from "react-icons/bi";
 import { getMenuStyles } from "../utils/Command";
+import { useAuth0 } from "@auth0/auth0-react";
+import ProfileMenu from "./ProfileMenu";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerColor = useHeaderColor();
+  const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
 
   return (
     <section className=" h-wrapper" style={{ background: headerColor }}>
@@ -33,7 +36,17 @@ const Header = () => {
           >
             <NavLink to="/properties">Properties</NavLink>
             <a href="mailto:cucghach6lo@gmail.com">Contact</a>
-            <button className="button">Login</button>
+            {/* DANGNHAP */}
+
+            {!isAuthenticated ? (
+              <button className="button" onClick={loginWithRedirect}>
+                Login
+              </button>
+            ) : (
+              <div>
+                <ProfileMenu user={user} logout={logout} />
+              </div>
+            )}
           </div>
         </OutsideClickHandler>
 

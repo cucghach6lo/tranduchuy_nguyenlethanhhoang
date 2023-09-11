@@ -8,7 +8,7 @@ export const api = axios.create({
 
 export const getAllProperties = async () => {
   try {
-    const response = await api.get("residency/allResidencies", {
+    const response = await api.get("/residency/allResidencies", {
       timeout: 10 * 1000,
     });
     if (response.status === 400 || response.status === 500) {
@@ -23,7 +23,7 @@ export const getAllProperties = async () => {
 
 export const getProperty = async (id) => {
   try {
-    const response = await api.get(`residency/${id}`, {
+    const response = await api.get(`/residency/${id}`, {
       timeout: 10 * 1000,
     });
     if (response.status === 400 || response.status === 500) {
@@ -32,6 +32,15 @@ export const getProperty = async (id) => {
     return response.data;
   } catch (error) {
     toast.error("Something went wrong");
+    throw error;
+  }
+};
+
+export const createUser = async (email) => {
+  try {
+    await api.post(`/user/register`, { email });
+  } catch (error) {
+    toast.error("Something went wrong, trying again");
     throw error;
   }
 };

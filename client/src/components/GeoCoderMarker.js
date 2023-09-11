@@ -11,7 +11,7 @@ let DefaulIcon = L.icon({
 });
 L.Marker.prototype.options.icon = DefaulIcon;
 
-const GeoCoderMarker = ({ address }) => {
+const GeoCoderMarker = (address) => {
   const map = useMap();
   const [position, setPosition] = useState([21.0285, 105.8542]);
 
