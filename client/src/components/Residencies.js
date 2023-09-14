@@ -54,11 +54,10 @@ function Residencies() {
           <span className="orangeText">Best Choices</span>
           <span className="primaryText">Popular Residencies</span>
         </div>
-
         <Swiper {...sliderSetting}>
           <SlideNextButton />
           {/* slider */}
-          {data.slice(0, 10).map((card, i) => (
+          {data.slice(0, 8).map((card, i) => (
             <SwiperSlide key={i}>
               <PropertyCard card={card} />
             </SwiperSlide>

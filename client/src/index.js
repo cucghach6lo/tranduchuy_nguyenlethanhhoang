@@ -13,7 +13,7 @@ root.render(
       authorizationParams={{
         redirectUri: "http://localhost:3000/",
       }}
-      audience="https://localhost:8000"
+      audience="http://localhost:8000"
       scope="openid profile email"
     >
       <App />

@@ -7,12 +7,12 @@ import {
   getAllFavourites,
   toFavourite,
 } from "../controllers/userController.js";
-
+import jwtCheck from "../config/auth0Config.js";
 const router = express.Router();
-router.post("/register", createUser);
-router.post("/bookVisit/:id", bookVisit);
+router.post("/register", jwtCheck, createUser);
+router.post("/bookVisit/:id", jwtCheck, bookVisit);
 router.post("/allBookings", getAllBookings);
-router.post("/removeBooking/:id", cancelBooking);
-router.post("/toFavourite/:rid", toFavourite);
-router.post("/allFavouvites/", getAllFavourites);
+router.post("/removeBooking/:id", jwtCheck, cancelBooking);
+router.post("/toFavourite/:rid", jwtCheck, toFavourite);
+router.post("/allFavourites/", jwtCheck, getAllFavourites);
 export { router as userRoute };

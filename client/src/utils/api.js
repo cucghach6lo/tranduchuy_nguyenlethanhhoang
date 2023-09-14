@@ -36,11 +36,106 @@ export const getProperty = async (id) => {
   }
 };
 
-export const createUser = async (email) => {
+export const createUser = async (email, token) => {
   try {
-    await api.post(`/user/register`, { email });
+    await api.post(
+      `/user/register`,
+      { email },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
   } catch (error) {
-    toast.error("Something went wrong, trying again");
+    toast.error("Something went wrong, Please try again");
     throw error;
+  }
+};
+
+// booking
+
+export const bookVisit = async (date, propertyId, email, token) => {
+  try {
+    await api.post(
+      `/user/bookVisit/${propertyId}`,
+      {
+        email,
+        id: propertyId,
+        date: dayjs(date).format("DD/MM/YYYY"),
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+  } catch (error) {
+    toast.error("Something went wrong, Please try again");
+    throw error;
+  }
+};
+
+// removeBooking
+
+export const removeBooking = async (id, email, token) => {
+  try {
+    await api.post(
+      `/user/removeBooking/${id}`,
+      {
+        email,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+  } catch (error) {
+    toast.error("Something went wrong, Please try again");
+
+    throw error;
+  }
+};
+
+export const toFavourite = async (id, email, token) => {
+  try {
+    await api.post(
+      `/user/toFavourite/${id}`,
+      {
+        email,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+  } catch (e) {
+    toast.error("Something went wrong, Please try again");
+
+    throw e;
+  }
+};
+
+export const getAllFavourites = async (email, token) => {
+  if (!token) return;
+  try {
+    const res = await api.post(
+      `/user/allFavourites`,
+      {
+        email,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    return res.data["favouritesResidenciesID"];
+  } catch (e) {
+    toast.error("Something went wrong while fetching favs");
+    throw e;
   }
 };
