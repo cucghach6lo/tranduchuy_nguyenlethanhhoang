@@ -1,7 +1,7 @@
 import "./App.css";
 import Layout from "./components/Layout";
 import { Suspense, useState } from "react";
-import Website from "./pages/Website";
+
 import Properties from "./components/Properties";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
@@ -9,8 +9,10 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Property from "./pages/Property";
+
 import UserDetailContext from "./components/UserDetailContext";
+import Website from "./Pages/Website";
+import Property from "./Pages/Property";
 
 function App() {
   const queryClient = new QueryClient();

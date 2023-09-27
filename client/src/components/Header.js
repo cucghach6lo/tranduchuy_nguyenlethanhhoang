@@ -6,14 +6,24 @@ import { Link, NavLink } from "react-router-dom";
 import useHeaderColor from "../hooks/userHeaderColor";
 import OutsideClickHandler from "react-outside-click-handler";
 import { BiMenuAltRight } from "react-icons/bi";
-import { getMenuStyles } from "../utils/Command";
+import { getMenuStyles } from "../utils/common";
 import { useAuth0 } from "@auth0/auth0-react";
 import ProfileMenu from "./ProfileMenu";
+import AddPropertyModal from "./Add/AddPropertyModal";
+import useAuthCheck from "../hooks/useAuthCheck";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerColor = useHeaderColor();
+  const [modalOpened, setModalOpened] = useState(false);
+
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
+  const { validateLogin } = useAuthCheck();
+  const handleAddPropertyClick = () => {
+    if (validateLogin()) {
+      setModalOpened(true);
+    }
+  };
 
   return (
     <section className=" h-wrapper" style={{ background: headerColor }}>
@@ -36,6 +46,11 @@ const Header = () => {
           >
             <NavLink to="/properties">Properties</NavLink>
             <a href="mailto:cucghach6lo@gmail.com">Contact</a>
+
+            {/* add  */}
+            <div onClick={handleAddPropertyClick}>Add Property</div>
+            <AddPropertyModal opened={modalOpened} setOpened={setModalOpened} />
+
             {/* DANGNHAP */}
 
             {!isAuthenticated ? (

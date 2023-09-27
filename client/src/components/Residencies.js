@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "../css/css.css";
 import "../css/Residencies.css";
 import "swiper/css";
-import { sliderSetting } from "../utils/Command";
+import { sliderSetting } from "../utils/common";
 import PropertyCard from "./PropertyCard";
 import useProperties from "../hooks/useProperties";
 import PuffLoader from "react-spinners/PuffLoader";

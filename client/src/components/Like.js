@@ -3,7 +3,7 @@ import { AiFillHeart } from "react-icons/ai";
 import useAuthCheck from "../hooks/useAuthCheck";
 import { useAuth0 } from "@auth0/auth0-react";
 import UserDetailContext from "./UserDetailContext";
-import { checkFavourites, updateFavourites } from "../utils/Command";
+import { checkFavourites, updateFavourites } from "../utils/common";
 import { useMutation } from "react-query";
 import { toFavourite } from "../utils/api";
 
@@ -37,6 +37,7 @@ const Like = ({ id }) => {
       setHeartColor((prev) => (prev === "#fa3e5f" ? "white" : "#fa3e5f"));
     }
   };
+
   return (
     <AiFillHeart
       size={24}
